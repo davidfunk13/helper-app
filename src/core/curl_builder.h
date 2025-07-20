@@ -1,28 +1,14 @@
 #pragma once
 
+#include <QPair>
 #include <QString>
 #include <QStringList>
-#include <QPair>
 
-class CurlBuilder
-{
-public:
-    enum HttpMethod {
-        GET,
-        POST,
-        PUT,
-        DELETE,
-        PATCH,
-        HEAD,
-        OPTIONS
-    };
+class CurlBuilder {
+  public:
+    enum HttpMethod { GET, POST, PUT, DELETE, PATCH, HEAD, OPTIONS };
 
-    enum VerboseLevel {
-        None,
-        V,
-        VV,
-        VVV
-    };
+    enum VerboseLevel { None, V, VV, VVV };
 
     struct CurlOptions {
         QString url;
@@ -40,6 +26,6 @@ public:
     static QString verboseLevelToString(VerboseLevel level);
     static QStringList getCommonHeaderValues(const QString &headerName);
 
-private:
+  private:
     static QString escapeShellArg(const QString &arg);
 };

@@ -1,5 +1,7 @@
-# Build directory
+# Build directories
 build/
+build-*/
+out/
 
 # CMake generated files
 CMakeCache.txt
@@ -77,3 +79,58 @@ Thumbs.db
 
 # Log files
 *.log
+
+# Modern C++ development
+# Package managers
+vcpkg_installed/
+_deps/
+
+# Static analysis
+.clang-tidy-cache/
+compile_commands.json
+
+# Code coverage
+*.gcov
+*.gcda
+*.gcno
+coverage/
+*.info
+
+# Sanitizer outputs
+*.san
+
+# Package files
+*.deb
+*.rpm
+*.dmg
+*.msi
+*.tar.gz
+*.zip
+
+# CTest
+Testing/
+CTestTestfile.cmake
+
+# CPack
+_CPack_Packages/
+CPackConfig.cmake
+CPackSourceConfig.cmake
+
+# Qt Creator
+*.pro.user*
+*.qbs.user
+CMakeLists.txt.user*
+
+# JetBrains IDEs
+.idea/
+cmake-build-*/
+
+# Visual Studio
+.vs/
+*.vcxproj*
+*.sln
+*.filters
+*.user
+
+# Claude
+.claude/
